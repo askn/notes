@@ -1,2 +1,1 @@
-notes
-=====
+Kişisel notlar
