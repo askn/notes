@@ -31,14 +31,14 @@ ActiveRecord::Migration sınıfı
 
 default: string veri türü
 
-    ```ruby
-    def change
-      create_table :cars do |t|
-        t.string :name
-        t.integer :doors_count
-      end
-    end
-    ```
+```ruby
+def change
+  create_table :cars do |t|
+    t.string :name
+    t.integer :doors_count
+  end
+end
+```
 
 change: çift yönlü hem çalıştırılabilir, hem geri alınabilir
 

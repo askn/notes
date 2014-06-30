@@ -1,3 +1,8 @@
+- insert
+
+    i
+    a karakterden sonra
+
 - save
 
     :up
@@ -132,7 +137,7 @@ dosya içeriğini alma
     :r filename
 
 komut çıktısını alma
-   
+
     :r! komut
 
 
@@ -146,6 +151,8 @@ komut çıktısını alma
     x karakter
     dw word
     dd satır
+    D imlecten satır sonuna
+    :%d alayını sil
 
 - swap
 
@@ -157,6 +164,8 @@ komut çıktısını alma
     V satır
 
     Ctrl-v block
+
+    gv bir önceki seçtiğini bir daha seç
 
 - record
 
@@ -195,7 +204,7 @@ ctrl+w değiştirme
     :tabclose
 
     :tabnew belge
-    
+
     :tabe belge
     :tabedit belge
 
@@ -245,3 +254,7 @@ TODO
 - Yapıştırma
 
     [yapıştırma](http://vim.wikia.com/wiki/Accessing_the_system_clipboard)
+
+-
+
+    "%p dosya ismini yapıştırır
