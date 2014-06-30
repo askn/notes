@@ -1,271 +1,211 @@
----
-###   save
+- save
 
-:up
+    :up
+    :w
 
-:w
+- save and close
 
----
-###   save and close
+    :wq
+    :x
+    ZZ
 
-:wq
 
-:x
+- Yön
 
-ZZ
+    j yukarı
+    k aşağı
+    h sağ
+    l sol
 
----
-###   Yön
 
-j yukarı
+- local config
 
-k aşağı
+    ~.vimrc
+    set number
 
-h sağ
+- kurulum
 
-l sol
-
----
-###   local config
-
-~.vimrc
-
-örnek:
-set number
-
----
-###   kurulum
-
-sudo apt-get install vim-full
+    sudo apt-get install vim-full
 
 - help
 
-:help <CTRL-D>
+    :help <CTRL-D>
+    :help :wq
 
-:help :wq
+- scroll
 
----
-###   scroll
+    Ctrl-f full aşağı
+    ctrl-b full yukarı
+    ctrl-d yarım aşağı
+    ctrl-u yarım yukarı
+    ctrl-e tek satır aşağı
+    ctrl-y tek satır yukarı
 
-Ctrl-f full aşağı
+- Kelimeler arası geçiş
 
-ctrl-b full yukarı
+    w bir sonraki işaretten sonrasına kadar git (askn.gdk 101 - g'de)word
+    W bir sonraki boşluktan sonrasına kadar git (askn.gdk 101 - 1'de)
 
-ctrl-d yarım aşağı
+    e bulunduğu kelimenin sonuna end
+    E bulunduğu kelimenin sonuna
 
-ctrl-u yarım yukarı
+    b bir önceki işaretten sonrasına kadar git
+    B
 
-ctrl-e tek satır aşağı
+- Cursor Pozisyon
 
-ctrl-y tek satır yukarı
+    0 satır başı
+    $ satır son
 
----
-###   Kelimeler arası geçiş
+- block
 
-w bir sonraki işaretten sonrasına kadar git (askn.gdk 101 - g'de)word
+    { block başı
+    } block sonu
 
-W bir sonraki boşluktan sonrasına kadar git (askn.gdk 101 - 1'de)
+    ( bir önceki cümle
+    ) bir sonraki cümle
 
-e bulunduğu kelimenin sonuna end
+- Dosya başı/sonu
 
-E bulunduğu kelimenin sonuna
+    :0 başı
+    gg
 
-b bir önceki işaretten sonrasına kadar git
+    1G
 
-B
+    G sonu
 
----
-###   Cursor Pozisyon
+    :$
 
-0 satır başı
+- Dosyada gezinme
 
-$ satır son
+    20% - dosyanın %20sine git
 
----
-###   block
+    :goto 25 - dosyanın 25. karakterine git
 
-{ block başı
+- Satır Numarası
 
-} block sonu
+    set nu
+    set number
 
-( bir önceki cümle
+    set nonu
+    set nonumber
 
-) bir sonraki cümle
+    :50 50.satıra git
+    50gg 50 satır yukarı
+    50 sağ sol aşağı yukarı
+    50 h j k l
 
----
-###   Dosya başı/sonu
+- işlem yapılan nokta
 
-:0 başı
+    :jumps işlem yapılan noktaları listeler
 
-gg
+    Ctrl-O bir öncekine git(belge, bulunulan belge içinde bir nokta)
 
-1G
+    Ctrl-I bir sonraki
 
-G sonu
+- Bookmark
 
-:$
+    m(isim) kaydet
 
----
-###   Dosyada gezinme
+    ma
 
-20% - dosyanın %20sine git
+    `(isim) git
+    `a
 
-:goto 25 - dosyanın 25. karakterine git
+- Tüm bookmark'lar
 
----
-###   Satır Numarası
+    :marks
+    `isim
 
-set nu
+    :marks a
+    ismi a olanın detayını göster
 
-set number
-
-set nonu
-
-set nonumber
-
-:50 50.satıra git
-
-50gg 50 satır yukarı
-
-50 sağ sol aşağı yukarı
-
-50 h j k l
-
----
-###   işlem yapılan nokta
-
-:jumps işlem yapılan noktaları listeler
-
-Ctrl-O bir öncekine git(belge, bulunulan belge içinde bir nokta)
-
-Ctrl-I bir sonraki
-
----
-###   Bookmark
-
-m(isim) kaydet
-
-ma
-
-        `(isim) git
-        `a
-
----
-###   Tüm bookmark'lar
-
-:marks
-        `isim
-
-        :marks a
-
-ismi a olanın detayını göster
-
----
-###   tag
+- tag
 
 TODO
-:Tagbar
+    :Tagbar
 
----
-###   İçe alma
+- İçe alma
+
 dosya içeriğini alma
-        :r filename
+
+    :r filename
 
 komut çıktısını alma
-        :r! komut
+   
+    :r! komut
 
----
-###   Replace
-r tek karakter
 
-R esc'ye basana kadar
+- Replace
 
----
-###   silme
+    r tek karakter
+    R esc'ye basana kadar
 
-x karakter
+- silme
 
-dw word
+    x karakter
+    dw word
+    dd satır
 
-dd satır
+- swap
 
----
-###   swap
+    xp swap karakter
 
-xp swap karakter
+- visual
 
----
-###   visual
+    v karakter
+    V satır
 
-v karakter
+    Ctrl-v block
 
-V satır
+- record
 
-Ctrl-v block
+    q ya bas kayda başla
+    işlemleri yap
+    q ya bas kaydı bitir
 
----
-###   record
+    @ bas tekrarla
+    3@ 3 kez tekrarla
 
-q ya bas kayda başla
+- sırala
 
-işlemleri yap
+    seç
+    :sort
+    :sort! tersten sırala
 
-q ya bas kaydı bitir
-
-@ bas tekrarla
-
-3@ 3 kez tekrarla
-
----
-###   sırala
-
-seç
-
-:sort
-
-:sort! tersten sırala
-
----
-###   değişkenin tanımlandığı yer
+- değişkenin tanımlandığı yer
 değişkenin üzerinde iken
 
-gd
+    gd
 
----
-###   Split
+- Split
 
-:vs
-
-:sp
+    :vs
+    :sp
 
 ctrl+w değiştirme
 
-:25 vs deneme
+    :25 vs deneme
 
----
-###   Tab
+- Tab
 
-$ vim -p deneme foobar
+    $ vim -p deneme foobar
 
-:tabc
+    :tabc
+    :tabclose
 
-:tabclose
+    :tabnew belge
+    
+    :tabe belge
+    :tabedit belge
 
-:tabnew belge
+    :tabs listele
+    :tabn sonraki
 
-:tabe belge
-
-:tabedit belge
-
-:tabs listele
-
-:tabn sonraki
-
-:tabn 2
+    :tabn 2
 
 g + t ikilisi ile tablar arası geçiş
 
----
 README.md
 
 cursoru yazının üzerine getirip
@@ -276,43 +216,32 @@ Ctrl w + f  split olarak açar
 
 Ctrl w + gf tab olarak açar
 
----
-###   map
+
+- map
 TODO
 - set
 TODO
 
----
-###   vim dizin
+- vim dizin
 
-:Sex split explore
+    :Sex split explore
+    :Vex vertical
+    :Tex tab
+    :Ex
 
-:Vex vertical
+- değiştir
 
-:Tex tab
+    :%s/_/_/gc
+    g hepsi
+    c onaylı
 
-:Ex
+- Tamamlama completion
 
----
-###   değiştir
+    Ctrl-X Ctrl-P kelime
+    Ctrl-X Ctrl-L satır
+    Ctrl-X Ctrl-F dosya ismi
+    Ctrl-X Ctrl-O dil için
 
-:%s/_/_/gc
+- Yapıştırma
 
-g hepsi
-
-c onaylı
-
----
-###   Tamamlama completion
-
-Ctrl-X Ctrl-P kelime
-
-Ctrl-X Ctrl-L satır
-
-Ctrl-X Ctrl-F dosya ismi
-
-Ctrl-X Ctrl-O dil için
-
-###   Yapıştırma
-
-[yapıştırma](http://vim.wikia.com/wiki/Accessing_the_system_clipboard)
+    [yapıştırma](http://vim.wikia.com/wiki/Accessing_the_system_clipboard)
