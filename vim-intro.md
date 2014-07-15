@@ -153,6 +153,10 @@ komut çıktısını alma
     dd satır
     D imlecten satır sonuna
     :%d alayını sil
+   
+Arasını sil
+
+   di', di", di(, di{
 
 - swap
 
