@@ -302,3 +302,8 @@ Bir işlemin sadece güncelleme sırasında..
 
     validates :name, presence: true, on: :update
     :create, :update seçenekleri atanabilir
+
+- İlişkili kayıtların otomatik silinmesi
+
+    has_one :car_detail, dependent: :destroy
+
